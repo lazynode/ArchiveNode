@@ -150,7 +150,7 @@ namespace Neo.Plugins
         }
 
         [RpcMethod]
-        protected virtual JObject InvokeFunction(JArray _params)
+        protected virtual JObject InvokeArchiveFunction(JArray _params)
         {
             UInt160 script_hash = UInt160.Parse(_params[0].AsString());
             string operation = _params[1].AsString();
@@ -167,7 +167,7 @@ namespace Neo.Plugins
         }
 
         [RpcMethod]
-        protected virtual JObject InvokeScript(JArray _params)
+        protected virtual JObject InvokeArchiveScript(JArray _params)
         {
             byte[] script = Convert.FromBase64String(_params[0].AsString());
             Signers signers = _params.Count >= 2 ? SignersFromJson((JArray)_params[1], system.Settings) : null;

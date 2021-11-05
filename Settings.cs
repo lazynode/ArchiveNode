@@ -17,10 +17,5 @@ namespace Neo.Plugins
             this.RocksDBPath = section.GetValue("RocksDBPath", "Data_RocksDB_{0}");
             this.ArchiveSkipRate = section.GetValue("ArchiveSkipRate", 100u);
         }
-
-        public static void Load(IConfigurationSection section)
-        {
-            Default = new Settings(section);
-        }
     }
 }

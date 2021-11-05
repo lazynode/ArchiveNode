@@ -1,0 +1,10 @@
+{
+    "PluginConfiguration": {
+        "ArchiveSkipRate": 100,
+        "RocksDBPath": "Data_RocksDB_{0}"
+    },
+    "Dependency": [
+        "RocksDBStore",
+        "RpcServer"
+    ]
+  }

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <PackageId>Neo.Plugins.ArchiveNode</PackageId>
+    <RootNamespace>Neo.Plugins</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Neo.Plugins.RpcServer" Version="3.0.3" />
+    <PackageReference Include="RocksDB" Version="6.25.3.22972" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="RocksDB" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="ArchiveNode\config.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
